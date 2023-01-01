@@ -1,0 +1,49 @@
+html, body {
+  font-family: "Alata";
+  font-size: 15px;
+}
+
+.cabecalho {
+  background-image: url("/assets/images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+}
+.cabecalho .cabecalho__container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.cabecalho .cabecalho__container .cabecalho__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+}
+.cabecalho .cabecalho__container .cabecalho__top .cabecalho__logo {
+  width: 40%;
+}
+.cabecalho .cabecalho__container .cabecalho__top .cabecalho__botao {
+  display: none;
+}
+.cabecalho .cabecalho__container .cabecalho__top .cabecalho__rotulo .cabecablho__menu-hamburguer {
+  background-image: url("/assets/images/icon-hamburger.svg");
+  background-repeat: repeat;
+  background-position: center;
+  display: inline-block;
+  height: 16px;
+  width: 26px;
+}
+.cabecalho .cabecalho__container .cabecalho__info {
+  padding: 2em;
+  margin: 25% 0;
+}
+.cabecalho .cabecalho__container .cabecalho__info .cabecalho__titulo {
+  color: hsl(0deg, 0%, 100%);
+  text-transform: uppercase;
+  font-size: 37.5px;
+  font-family: "Josefin Sans";
+  padding: 0.5em;
+  border: 2px solid;
+}/*# sourceMappingURL=style.css.map */

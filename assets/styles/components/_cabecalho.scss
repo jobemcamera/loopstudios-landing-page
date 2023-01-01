@@ -1,0 +1,48 @@
+@import '../abstract/variaveis';
+
+.cabecalho {
+    background-image: url('/assets/images/mobile/image-hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    .cabecalho__container {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        .cabecalho__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2em;
+            .cabecalho__logo {
+                width: 40%;
+            }
+            .cabecalho__botao {
+                display: none;
+            }
+            .cabecalho__rotulo {
+                .cabecablho__menu-hamburguer {
+                    background-image: url('/assets/images/icon-hamburger.svg');
+                    background-repeat: repeat;
+                    background-position: center;
+                    display: inline-block;
+                    height: 16px;
+                    width: 26px;
+                }
+            }  
+        }
+    .cabecalho__info {
+        padding: 2em;
+        margin: 25% 0;
+        .cabecalho__titulo {
+            color: $cor-principal;
+            text-transform: uppercase;
+            font-size: $tamanho-texto * 2.5;
+            font-family: $fonte-secundaria;
+            padding: 0.5em;
+            border: 2px solid;
+        }
+    }
+    }
+}
