@@ -10,6 +10,7 @@
         display: flex;
         flex-direction: column;
         justify-items: center;
+        position: relative;
         .cabecalho__top {
             display: flex;
             justify-content: space-between;
@@ -19,30 +20,48 @@
                 width: 40%;
             }
             .cabecalho__botao {
-                display: none;
+                background-image: url('/assets/images/icon-hamburger.svg');
+                background-repeat: repeat;
+                background-position: center;
+                display: inline-block;
+                height: 16px;
+                width: 26px;
             }
-            .cabecalho__rotulo {
-                .cabecablho__menu-hamburguer {
-                    background-image: url('/assets/images/icon-hamburger.svg');
-                    background-repeat: repeat;
-                    background-position: center;
-                    display: inline-block;
-                    height: 16px;
-                    width: 26px;
-                }
-            }  
+            /*.cabecalho__botao.active {
+                background-image: url('/assets/images/icon-close.svg');
+                width: 22px;
+            }*/
         }
-    .cabecalho__info {
-        padding: 2em;
-        margin: 25% 0;
-        .cabecalho__titulo {
-            color: $cor-principal;
-            text-transform: uppercase;
-            font-size: $tamanho-texto * 2.5;
-            font-family: $fonte-secundaria;
-            padding: 0.5em;
-            border: 2px solid;
+        .cabecalho__info {
+            padding: 2em;
+            margin: 25% 0;
+            .cabecalho__titulo {
+                color: $cor-principal;
+                text-transform: uppercase;
+                font-size: $tamanho-texto * 2.5;
+                font-family: $fonte-principal;
+                padding: 0.5em;
+                border: 2px solid;
+            }
         }
     }
+    .nav__lista { 
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 25%;
+        .nav__item {
+            padding: 0.5em 2em;
+            .nav__link {
+                color: $cor-principal;
+                font-family: $fonte-principal;
+                text-decoration: none;
+                font-size: $tamanho-texto * 1.5;
+                text-transform: uppercase;
+            }
+        }
     }
+    /*.nav__lista.active {
+        display: flex;
+    }*/
 }

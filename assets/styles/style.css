@@ -1,5 +1,5 @@
 html, body {
-  font-family: "Alata";
+  font-family: "Josefin Sans";
   font-size: 15px;
 }
 
@@ -9,25 +9,30 @@ html, body {
   background-position: center;
   background-size: cover;
   height: 80vh;
+  /*.nav__lista.active {
+      display: flex;
+  }*/
 }
 .cabecalho .cabecalho__container {
   display: flex;
   flex-direction: column;
   justify-items: center;
+  position: relative;
 }
 .cabecalho .cabecalho__container .cabecalho__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2em;
+  /*.cabecalho__botao.active {
+      background-image: url('/assets/images/icon-close.svg');
+      width: 22px;
+  }*/
 }
 .cabecalho .cabecalho__container .cabecalho__top .cabecalho__logo {
   width: 40%;
 }
 .cabecalho .cabecalho__container .cabecalho__top .cabecalho__botao {
-  display: none;
-}
-.cabecalho .cabecalho__container .cabecalho__top .cabecalho__rotulo .cabecablho__menu-hamburguer {
   background-image: url("/assets/images/icon-hamburger.svg");
   background-repeat: repeat;
   background-position: center;
@@ -46,4 +51,42 @@ html, body {
   font-family: "Josefin Sans";
   padding: 0.5em;
   border: 2px solid;
+}
+.cabecalho .nav__lista {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 25%;
+}
+.cabecalho .nav__lista .nav__item {
+  padding: 0.5em 2em;
+}
+.cabecalho .nav__lista .nav__item .nav__link {
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Josefin Sans";
+  text-decoration: none;
+  font-size: 22.5px;
+  text-transform: uppercase;
+}
+
+.sobre {
+  text-align: center;
+  padding: 6em 0;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.sobre .sobre__container .sobre__imagem {
+  width: 80%;
+}
+.sobre .sobre__container .sobre__titulo {
+  text-transform: uppercase;
+  padding: 1em 0;
+  font-family: "Josefin Sans";
+  font-size: 30px;
+  font-weight: 300;
+}
+.sobre .sobre__container .sobre__texto {
+  font-family: "Alata";
+  color: hsl(0deg, 0%, 55%);
+  padding: 0 3em;
+  line-height: 25px;
 }/*# sourceMappingURL=style.css.map */
