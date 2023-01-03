@@ -1,11 +1,15 @@
+const cabecalho = document.querySelector('.cabecalho')
 const botaoHamburguer = document.querySelector('.cabecalho__botao')
 const navLista = document.querySelector('.nav__lista')
 
-let menuAberto = false;
 
 botaoHamburguer.onclick = () => {
-    if (!menuAberto) {
-        console.log('ok')
-        botaoHamburguer.style.backgroundImage = "url ('../../images/icon-close.svg')";
-    } 
+    if (botaoHamburguer.classList.contains("active")) {
+        botaoHamburguer.classList.remove('active')
+        navLista.style.display = 'none'
+    } else {
+        botaoHamburguer.classList.add('active')
+        navLista.style.display = 'flex'
+    }
+    
 }

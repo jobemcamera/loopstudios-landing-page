@@ -1,5 +1,6 @@
 @import '../abstract/variaveis';
 
+
 .cabecalho {
     background-image: url('/assets/images/mobile/image-hero.jpg');
     background-repeat: no-repeat;
@@ -18,6 +19,7 @@
             padding: 2em;
             .logo {
                 @include logo();
+                z-index: 9999;
             }
             .cabecalho__botao {
                 background-image: url('/assets/images/icon-hamburger.svg');
@@ -26,11 +28,13 @@
                 display: inline-block;
                 height: 16px;
                 width: 26px;
+                z-index: 9999;
             }
-            /*.cabecalho__botao.active {
+            
+            .cabecalho__botao.active {
                 background-image: url('/assets/images/icon-close.svg');
                 width: 22px;
-            }*/
+            }
         }
         .cabecalho__info {
             padding: 2em;
@@ -44,23 +48,32 @@
             }
         }
     }
-    .nav__lista { 
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 25%;
-        .nav__item {
-            padding: 0.5em 2em;
-            .nav__link {
-                color: $cor-principal;
-                font-family: $fonte-principal;
-                text-decoration: none;
-                font-size: $tamanho-texto * 1.5;
-                text-transform: uppercase;
+    .nav {
+        .nav__lista { 
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $cor-secundaria;
+            min-height: 100vh;
+            .nav__item:first-child {
+                margin-top: 10em;
+            }
+            .nav__item {
+                padding: 1em 2em;
+                .nav__link {
+                    color: $cor-principal;
+                    font-family: $fonte-principal;
+                    text-decoration: none;
+                    font-weight: 300;
+                    font-size: $tamanho-texto * 1.5;
+                    text-transform: uppercase;
+                }
             }
         }
     }
-    /*.nav__lista.active {
-        display: flex;
-    }*/
+    
 }
