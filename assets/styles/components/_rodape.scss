@@ -5,8 +5,8 @@
     text-align: center;
     .rodape__container {
         padding: 3em;
-        .rodape__logo {
-            width: 40%;
+        .logo {
+            @include logo();
         }
         .rodape__lista {
             padding: 2em 0;

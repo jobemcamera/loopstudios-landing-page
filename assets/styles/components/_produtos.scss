@@ -6,10 +6,7 @@
     padding-bottom: 6em;
     .produtos__container {
         .produtos__titulo {
-            text-transform: uppercase;
-            padding: 1em 0;
-            font-size: $tamanho-texto * 2;
-            font-weight: 300;
+            @include titulo();
         }
         .produtos__lista {
             padding: 1em 0;

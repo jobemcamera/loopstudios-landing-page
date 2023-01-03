@@ -9,11 +9,7 @@
             width: 80%;
         }
         .sobre__titulo {
-            text-transform: uppercase;
-            padding: 1em 0;
-            font-family: $fonte-principal;
-            font-size: $tamanho-texto * 2;
-            font-weight: 300;
+            @include titulo();
         }
         .sobre__texto {
             font-family: $fonte-secundaria;
@@ -21,5 +17,5 @@
             padding: 0 3em;
             line-height: 25px;
         }
-    }
+    } 
 }

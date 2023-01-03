@@ -16,8 +16,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 2em;
-            .cabecalho__logo {
-                width: 40%;
+            .logo {
+                @include logo();
             }
             .cabecalho__botao {
                 background-image: url('/assets/images/icon-hamburger.svg');
@@ -39,7 +39,6 @@
                 color: $cor-principal;
                 text-transform: uppercase;
                 font-size: $tamanho-texto * 2.5;
-                font-family: $fonte-principal;
                 padding: 0.5em;
                 border: 2px solid;
             }
