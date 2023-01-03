@@ -1,0 +1,48 @@
+@import '../abstract/variaveis';
+
+.produtos {
+    text-align: center;
+    background-color: $cor-principal;
+    padding-bottom: 6em;
+    .produtos__container {
+        .produtos__titulo {
+            text-transform: uppercase;
+            padding: 1em 0;
+            font-size: $tamanho-texto * 2;
+            font-weight: 300;
+        }
+        .produtos__lista {
+            padding: 1em 0;
+            .produtos__item {
+                padding: 0.5em 0;
+                position: relative;
+                .produtos__imagem {
+                    width: 80%;
+                    display: inline-block;
+                    filter: brightness(75%);
+                }
+                .produtos__nome {
+                    position: absolute;
+                    left: 15%;
+                    top: 50%;
+                    text-align: left;
+                    font-size: $tamanho-texto * 1.5;
+                    font-weight: 300;
+                    color: $cor-principal;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .produtos__botao {
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid $cor-secundaria;
+            padding: 0.5em 2.5em;
+            font-size: 14px;
+            font-family: $fonte-secundaria;
+            letter-spacing: 3px;
+            font-weight: 400;
+        }
+    }
+}
