@@ -149,20 +149,61 @@ html, body {
   padding: 6em 0;
   background-color: hsl(0deg, 0%, 100%);
 }
+@media screen and (min-width: 768px) {
+  .sobre .sobre__container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+  }
+}
 .sobre .sobre__container .sobre__imagem {
   width: 80%;
 }
-.sobre .sobre__container .sobre__titulo {
+@media screen and (min-width: 768px) {
+  .sobre .sobre__container .sobre__imagem {
+    width: 60%;
+    background-image: url("/assets/images/desktop/image-interactive.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .sobre .sobre__container .sobre__info {
+    position: absolute;
+    background-color: hsl(0deg, 0%, 100%);
+    box-sizing: border-box;
+    width: 60%;
+    bottom: 0;
+    left: 45%;
+    text-align: left;
+    padding: 4rem 0 0 4rem;
+  }
+}
+.sobre .sobre__container .sobre__info .sobre__titulo {
   text-transform: uppercase;
   padding: 1em 0;
   font-size: 30px;
   font-weight: 300;
 }
-.sobre .sobre__container .sobre__texto {
+@media screen and (min-width: 768px) {
+  .sobre .sobre__container .sobre__info .sobre__titulo {
+    text-align: left;
+    padding: 0;
+    max-width: 25rem;
+  }
+}
+.sobre .sobre__container .sobre__info .sobre__texto {
   font-family: "Alata";
   color: hsl(0deg, 0%, 55%);
   padding: 0 3em;
   line-height: 25px;
+}
+@media screen and (min-width: 768px) {
+  .sobre .sobre__container .sobre__info .sobre__texto {
+    font-size: 10px;
+    text-align: left;
+    padding: 1em 0 0 0;
+    max-width: 95%;
+  }
 }
 
 .produtos {

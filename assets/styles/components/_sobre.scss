@@ -5,17 +5,58 @@
     padding: 6em 0;
     background-color: $cor-principal;
     .sobre__container {
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+        }
+
         .sobre__imagem {
             width: 80%;
+
+            @media screen and (min-width: 768px) {
+                width: 60%;   
+                background-image: url('/assets/images/desktop/image-interactive.jpg');
+            }
         }
-        .sobre__titulo {
-            @include titulo();
-        }
-        .sobre__texto {
-            font-family: $fonte-secundaria;
-            color: $cor-terciaria;
-            padding: 0 3em;
-            line-height: 25px;
+        .sobre__info {
+
+            @media screen and (min-width: 768px) {
+                position: absolute;
+                background-color: $cor-principal;
+                box-sizing: border-box;
+                width: 60%;
+                bottom: 0;
+                left: 45%;
+                text-align: left;
+                padding: 4rem 0 0 4rem;
+            }
+
+            .sobre__titulo {
+                @include titulo();
+                @include reponsivo() {
+                    text-align: left;
+                    padding: 0;
+                    max-width: 25rem;
+                    
+                }
+            }
+            .sobre__texto {
+                font-family: $fonte-secundaria;
+                color: $cor-terciaria;
+                padding: 0 3em;
+                line-height: 25px;
+    
+                @media screen and (min-width: 768px) {
+                    font-size: $tamanho-texto / 1.5;
+                    text-align: left;
+                    padding: 1em 0 0 0;
+                    max-width: 95%
+                    
+                }
+            }
         }
     } 
 }
