@@ -6,7 +6,7 @@
     .rodape__container {
         padding: 3em;
         .logo {
-            @include logo();
+            width: 40%;
         }
         .rodape__lista {
             padding: 2em 0;

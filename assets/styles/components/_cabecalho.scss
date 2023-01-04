@@ -7,18 +7,32 @@
     background-position: center;
     background-size: cover;
     height: 80vh;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        background-image: url('/assets/images/desktop/image-hero.jpg');
+        background-size: 100% 100%, 100%, 100%;
+    }
     .cabecalho__container {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        position: relative;
+
+        @media screen and (min-width: 768px) {
+            width: 80%;
+            margin: 0 auto;
+        }
         .cabecalho__top {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 2em;
+
+            @media screen and (min-width: 768px) {
+                padding: 4em 0;
+            }
+
             .logo {
-                @include logo();
                 z-index: 9999;
             }
             .cabecalho__botao {
@@ -29,6 +43,10 @@
                 height: 16px;
                 width: 26px;
                 z-index: 9999;
+
+                @media screen and (min-width: 768px) {
+                    display: none;
+                }
             }
             
             .cabecalho__botao.active {
@@ -37,18 +55,34 @@
             }
         }
         .cabecalho__info {
-            padding: 2em;
-            margin: 25% 0;
+            max-width: 30rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0 2em;
+
+            @media screen and (min-width: 768px) {
+                padding: 0;
+                left: 10%;
+                transform: translate(0%, -50%);
+            }
             .cabecalho__titulo {
                 color: $cor-principal;
                 text-transform: uppercase;
                 font-size: $tamanho-texto * 2.5;
+                font-weight: 300;
                 padding: 0.5em;
                 border: 2px solid;
+
+                @media screen and (min-width: 768px) {
+                    font-weight: 300;
+                    font-size: $tamanho-texto * 3.5;
+                    max-width: 30rem;
+                }
             }
         }
     }
-    .nav {
         .nav__lista { 
             display: none;
             flex-direction: column;
@@ -59,11 +93,30 @@
             left: 0;
             background-color: $cor-secundaria;
             min-height: 100vh;
+            z-index: 999;
+
+            @media screen and (min-width: 768px) {
+                display: flex;
+                position: static;
+                flex-direction: row;
+                background-color: transparent;
+                min-height: 0;
+            }
+
             .nav__item:first-child {
                 margin-top: 10em;
+
+                @media screen and (min-width: 768px) {
+                    margin-top: 0;
+                }
             }
             .nav__item {
                 padding: 1em 2em;
+
+                @media screen and (min-width: 768px) {
+                    padding: 0;
+                }
+
                 .nav__link {
                     color: $cor-principal;
                     font-family: $fonte-principal;
@@ -71,9 +124,14 @@
                     font-weight: 300;
                     font-size: $tamanho-texto * 1.5;
                     text-transform: uppercase;
+
+                    @media screen and (min-width: 768px) {
+                        font-size: $tamanho-texto * 1.1;
+                        text-transform: none;
+                        padding-left: 1em;
+                        font-weight: 400;
+                    }
                 }
             }
         }
-    }
-    
 }
