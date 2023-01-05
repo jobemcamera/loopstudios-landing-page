@@ -43,6 +43,9 @@ html, body {
   z-index: 9999;
 }
 .cabecalho .cabecalho__container .cabecalho__top .cabecalho__botao {
+  display: none;
+}
+.cabecalho .cabecalho__container .cabecalho__top .cabecalho__menu-hamburguer {
   background-image: url("/assets/images/icon-hamburger.svg");
   background-repeat: repeat;
   background-position: center;
@@ -52,13 +55,18 @@ html, body {
   z-index: 9999;
 }
 @media screen and (min-width: 768px) {
-  .cabecalho .cabecalho__container .cabecalho__top .cabecalho__botao {
+  .cabecalho .cabecalho__container .cabecalho__top .cabecalho__menu-hamburguer {
     display: none;
   }
 }
-.cabecalho .cabecalho__container .cabecalho__top .cabecalho__botao.active {
+.cabecalho .cabecalho__container .cabecalho__top .cabecalho__botao:checked ~ .cabecalho__rotulo > .cabecalho__menu-hamburguer {
   background-image: url("/assets/images/icon-close.svg");
   width: 22px;
+  z-index: 9999;
+  position: relative;
+}
+.cabecalho .cabecalho__container .cabecalho__top .cabecalho__botao:checked ~ .nav__lista {
+  display: flex;
 }
 .cabecalho .cabecalho__container .cabecalho__info {
   max-width: 30rem;
