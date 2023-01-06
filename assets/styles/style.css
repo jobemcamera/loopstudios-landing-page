@@ -263,6 +263,7 @@ html, body {
 .produtos .produtos__container .produtos__lista .produtos__item {
   padding: 0.5em 0;
   position: relative;
+  cursor: pointer;
 }
 @media screen and (min-width: 930px) {
   .produtos .produtos__container .produtos__lista .produtos__item {
@@ -288,6 +289,13 @@ html, body {
     display: inline-block;
   }
 }
+.produtos .produtos__container .produtos__lista .produtos__item .produtos__imagem--desktop:hover {
+  opacity: 0.4;
+  transition: 0.7ms ease-in;
+}
+.produtos .produtos__container .produtos__lista .produtos__item .produtos__imagem--desktop:hover ~ .produtos__nome {
+  color: hsl(0deg, 0%, 0%);
+}
 .produtos .produtos__container .produtos__lista .produtos__item .produtos__nome {
   position: absolute;
   left: 15%;
@@ -302,6 +310,7 @@ html, body {
   .produtos .produtos__container .produtos__lista .produtos__item .produtos__nome {
     left: 20%;
     top: 80%;
+    font-size: 30px;
   }
 }
 .produtos .produtos__container .produtos__botao {
@@ -328,6 +337,11 @@ html, body {
     display: flex;
     align-items: center;
   }
+}
+.produtos .produtos__container .botao__desktop:hover {
+  background-color: hsl(0deg, 0%, 0%);
+  color: hsl(0deg, 0%, 100%);
+  transition: 0.7ms ease-in;
 }
 
 .rodape {
