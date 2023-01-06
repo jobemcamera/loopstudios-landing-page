@@ -369,6 +369,16 @@ html, body {
 .rodape .rodape__container .rodape__esquerdo .rodape__lista .rodape__item .rodape__link {
   text-decoration: none;
   color: hsl(0deg, 0%, 100%);
+  position: relative;
+}
+.rodape .rodape__container .rodape__esquerdo .rodape__lista .rodape__item .rodape__link:hover::before {
+  content: "";
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: 25%;
+  top: 150%;
+  background-color: hsl(0deg, 0%, 100%);
 }
 @media screen and (min-width: 1024px) {
   .rodape .rodape__container .rodape__direito {
@@ -381,12 +391,6 @@ html, body {
   justify-content: center;
   gap: 1rem;
 }
-@media screen and (min-width: 1024px) {
-  .rodape .rodape__container .rodape__direito .rodape__redes {
-    justify-content: end;
-    padding-bottom: 2rem;
-  }
-}
 .rodape .rodape__container .rodape__direito .rodape__redes .facebook {
   background-image: url("/assets/images/icon-facebook.svg");
   background-repeat: no-repeat;
@@ -394,6 +398,16 @@ html, body {
   display: inline-block;
   height: 24px;
   width: 24px;
+  position: relative;
+}
+.rodape .rodape__container .rodape__direito .rodape__redes .facebook:hover::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: 150%;
+  background-color: hsl(0deg, 0%, 100%);
 }
 .rodape .rodape__container .rodape__direito .rodape__redes .twitter {
   background-image: url("/assets/images/icon-twitter.svg");
@@ -402,6 +416,16 @@ html, body {
   display: inline-block;
   height: 24px;
   width: 24px;
+  position: relative;
+}
+.rodape .rodape__container .rodape__direito .rodape__redes .twitter:hover::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: 150%;
+  background-color: hsl(0deg, 0%, 100%);
 }
 .rodape .rodape__container .rodape__direito .rodape__redes .pinterest {
   background-image: url("/assets/images/icon-pinterest.svg");
@@ -410,6 +434,16 @@ html, body {
   display: inline-block;
   height: 24px;
   width: 24px;
+  position: relative;
+}
+.rodape .rodape__container .rodape__direito .rodape__redes .pinterest:hover::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: 150%;
+  background-color: hsl(0deg, 0%, 100%);
 }
 .rodape .rodape__container .rodape__direito .rodape__redes .instagram {
   background-image: url("/assets/images/icon-instagram.svg");
@@ -418,6 +452,22 @@ html, body {
   display: inline-block;
   height: 24px;
   width: 24px;
+  position: relative;
+}
+.rodape .rodape__container .rodape__direito .rodape__redes .instagram:hover::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: 150%;
+  background-color: hsl(0deg, 0%, 100%);
+}
+@media screen and (min-width: 1024px) {
+  .rodape .rodape__container .rodape__direito .rodape__redes {
+    justify-content: end;
+    padding-bottom: 2rem;
+  }
 }
 .rodape .rodape__container .rodape__direito .rodape__texto {
   color: hsl(0deg, 0%, 55%);

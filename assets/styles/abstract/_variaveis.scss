@@ -5,29 +5,3 @@ $cor-secundaria: hsl(0, 0%, 0%);
 $cor-terciaria: hsl(0, 0%, 55%);
 $cor-quatenaria: hsl(0, 0%, 41%);
 $tamanho-texto: 15px;
-
-@mixin titulo {
-    text-transform: uppercase;
-    padding: 1em 0;
-    font-size: $tamanho-texto * 2;
-    font-weight: 300;
-}
-
-@mixin botao {
-    text-decoration: none;
-    text-transform: uppercase;
-    border: 1px solid $cor-secundaria;
-    padding: 0.5em 2.5em;
-    font-size: 14px;
-    font-family: $fonte-secundaria;
-    letter-spacing: 3px;
-    font-weight: 400;
-}
-
-@mixin reponsivo($tamanho) {
-    @if $tamanho == tablet {
-        @media screen and (min-width: 768px) { @content; }
-    }
-    
-}
-
