@@ -17,9 +17,10 @@
         display: flex;
         flex-direction: column;
         justify-items: center;
+    
 
         @media screen and (min-width: 768px) {
-            width: 80%;
+            width: 60%;
             margin: 0 auto;
         }
         .cabecalho__top {
@@ -73,7 +74,7 @@
 
             @media screen and (min-width: 768px) {
                 padding: 0;
-                left: 10%;
+                left: 20%;
                 transform: translate(0%, -50%);
             }
             .cabecalho__titulo {

@@ -5,18 +5,63 @@
     background-color: $cor-principal;
     padding-bottom: 6em;
     .produtos__container {
+
+        @media screen and (min-width: 768px) {
+            width: 60%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .produtos__container--desktop {
+            @media screen and (min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+                padding: 1em 0;
+            }
+        }
+
         .produtos__titulo {
             @include titulo();
+            
+            @media screen and (min-width: 768px) {
+                align-self: start;
+                padding: 0;
+            }
         }
         .produtos__lista {
-            padding: 1em 0;
+            padding: 1em 0 3em 0;
+
+            @media screen and (min-width: 768px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 2rem;
+            }
             .produtos__item {
                 padding: 0.5em 0;
                 position: relative;
-                .produtos__imagem {
+
+                @media screen and (min-width: 768px) {
+                    display: grid;
+                    padding: 0;                    
+                }
+                .produtos__imagem--mobile {
                     width: 80%;
                     display: inline-block;
                     filter: brightness(75%);
+
+                    @media screen and (min-width: 768px) {
+                        display: none;
+                    }
+                }
+                .produtos__imagem--desktop {
+                    display: none;
+                    filter: brightness(75%);
+
+                    @media screen and (min-width: 768px) {
+                        display: flex;
+                    }
                 }
                 .produtos__nome {
                     position: absolute;
@@ -30,8 +75,8 @@
                 }
             }
         }
-
         .produtos__botao {
+            display: inline-block;
             text-decoration: none;
             text-transform: uppercase;
             border: 1px solid $cor-secundaria;
@@ -40,6 +85,22 @@
             font-family: $fonte-secundaria;
             letter-spacing: 3px;
             font-weight: 400;
+                        
+        }
+        .botao__mobile {
+            
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+        .botao__desktop {
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display: flex;
+                align-items: center;
+
+            }
         }
     }
 }
