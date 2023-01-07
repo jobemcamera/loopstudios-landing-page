@@ -25,9 +25,12 @@
         .produtos__titulo {
             @include titulo();
             
-            @media screen and (min-width: 930px) {
+            @include reponsivo(tablet) {
                 align-self: start;
                 padding: 0;
+            }
+            @include reponsivo(largeDesktop) {
+                font-size: $tamanho-texto * 2.5;
             }
         }
         .produtos__lista {

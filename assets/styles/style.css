@@ -167,7 +167,7 @@ html, body {
   padding: 6em 0;
   background-color: hsl(0deg, 0%, 100%);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .sobre .sobre__container {
     display: flex;
     width: 60%;
@@ -178,22 +178,26 @@ html, body {
 .sobre .sobre__container .sobre__imagem {
   width: 80%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .sobre .sobre__container .sobre__imagem {
     width: 60%;
     background-image: url("/assets/images/desktop/image-interactive.jpg");
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .sobre .sobre__container .sobre__info {
     position: absolute;
     background-color: hsl(0deg, 0%, 100%);
     box-sizing: border-box;
-    width: 60%;
     bottom: 0;
     left: 45%;
     text-align: left;
-    padding: 4rem 0 0 4rem;
+    padding: 3.5rem 0 0 3.5rem;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .sobre .sobre__container .sobre__info {
+    padding: 5rem 0 0 5rem;
   }
 }
 .sobre .sobre__container .sobre__info .sobre__titulo {
@@ -202,18 +206,35 @@ html, body {
   font-size: 30px;
   font-weight: 300;
 }
+@media screen and (min-width: 1024px) {
+  .sobre .sobre__container .sobre__info .sobre__titulo {
+    text-align: left;
+    padding: 0 0 0.5rem 0;
+    max-width: 25rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .sobre .sobre__container .sobre__info .sobre__titulo {
+    font-size: 37.5px;
+  }
+}
 .sobre .sobre__container .sobre__info .sobre__texto {
   font-family: "Alata";
   color: hsl(0deg, 0%, 55%);
   padding: 0 3em;
   line-height: 25px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .sobre .sobre__container .sobre__info .sobre__texto {
-    font-size: 10px;
+    font-size: 12.5px;
     text-align: left;
     padding: 1em 0 0 0;
-    max-width: 95%;
+    box-sizing: border-box;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .sobre .sobre__container .sobre__info .sobre__texto {
+    font-size: 15px;
   }
 }
 
@@ -247,6 +268,11 @@ html, body {
   .produtos .produtos__container .produtos__titulo {
     align-self: start;
     padding: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .produtos .produtos__container .produtos__titulo {
+    font-size: 37.5px;
   }
 }
 .produtos .produtos__container .produtos__lista {

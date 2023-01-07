@@ -18,7 +18,13 @@
 
 @mixin reponsivo($tamanho) {
     @if $tamanho == tablet {
-        @media screen and (min-width: 768px) { @content; }
+        @media screen and (min-width: 930px) { @content; }
+    } @else if $tamanho == desktop {
+        @media screen and (min-width: 1024px) { @content; }
+    } @else if $tamanho == largeDesktop {
+        @media screen and (min-width: 1440px) { @content; }
+    } @else if $tamanho == tv {
+        @media screen and (min-width: 1720px) { @content; }
     }
     
 }

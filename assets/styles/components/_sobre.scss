@@ -7,7 +7,7 @@
     background-color: $cor-principal;
     .sobre__container {
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 1024px) {
             display: flex;
             width: 60%;
             margin: 0 auto;
@@ -16,32 +16,37 @@
 
         .sobre__imagem {
             width: 80%;
-
-            @media screen and (min-width: 768px) {
-                width: 60%;   
+            
+            @media screen and (min-width: 1024px) {
+                width: 60%;
                 background-image: url('/assets/images/desktop/image-interactive.jpg');
             }
         }
         .sobre__info {
 
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: 1024px) {
                 position: absolute;
                 background-color: $cor-principal;
                 box-sizing: border-box;
-                width: 60%;
                 bottom: 0;
                 left: 45%;
                 text-align: left;
-                padding: 4rem 0 0 4rem;
+                padding: 3.5rem 0 0 3.5rem;
+            }
+
+            @media screen and (min-width: 1278px) {
+                padding: 5rem 0 0 5rem;
             }
 
             .sobre__titulo {
                 @include titulo();
                 @include reponsivo(desktop) {
                     text-align: left;
-                    padding: 0;
+                    padding: 0 0 0.5rem 0;
                     max-width: 25rem;
-                    
+                }
+                @include reponsivo(largeDesktop) {
+                    font-size: $tamanho-texto * 2.5;
                 }
             }
             .sobre__texto {
@@ -50,12 +55,15 @@
                 padding: 0 3em;
                 line-height: 25px;
     
-                @media screen and (min-width: 768px) {
-                    font-size: $tamanho-texto / 1.5;
+                @media screen and (min-width: 1024px) {
+                    font-size: $tamanho-texto / 1.2;
                     text-align: left;
                     padding: 1em 0 0 0;
-                    max-width: 95%
-                    
+                    box-sizing: border-box;
+                }
+
+                @media screen and (min-width: 1278px) {
+                    font-size: $tamanho-texto;
                 }
             }
         }
