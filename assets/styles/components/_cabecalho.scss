@@ -141,10 +141,11 @@
                         text-transform: none;
                         padding-left: 1em;
                         font-weight: 400;
+
+                        &:hover::before {
+                            @include flutuacao(40%, 45%)
+                        }
                     }
-                }
-                .nav__link:hover::before {
-                    @include flutuacao(40%, 45%)
                 }
             }
         }
